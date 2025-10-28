@@ -26,7 +26,7 @@ export default function PaymentForm( {amount , description , img ,onclose}) {
   
   const handlePayment = async () => {
     try {
-      const response = await  axios.post('https://payment-gateway.lailaolab.com/v1/api/link/payment-link', {
+      const response = await  axios.post('https://payment-gateway.phajay.co/v1/api/link/payment-link', {
         amount: price,
         description: description,
         orderNo: orderNo
