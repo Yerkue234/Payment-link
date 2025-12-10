@@ -20,13 +20,13 @@ export default function PaymentForm( {amount , description , img ,onclose}) {
     setMounted(true);
   }, []);
 
-  const KEY =  "$2a$10$36pPFlYDRzRLEJFzSS.6H.MmkBq24iPP5VN1g632kj5f699xbYSKS";
+  const KEY =  "";
 
   const orderNo = `ORDER-${Date.now()}`;
   
   const handlePayment = async () => {
     try {
-      const response = await  axios.post('https://payment-gateway.phajay.co/v1/api/link/payment-link', {
+      const response = await  axios.post('https://payment-gateway.phajay.co:8000/v1/api/link/payment-link', {
         amount: price,
         description: description,
         orderNo: orderNo
